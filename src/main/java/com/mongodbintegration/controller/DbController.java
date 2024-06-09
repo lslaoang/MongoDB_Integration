@@ -24,13 +24,13 @@ public class DbController {
         return dbService.getModelInfos();
     }
 
-    @GetMapping("/add-all")
-    public void getData(@RequestParam List<ModelData> modelData) {
+    @PostMapping("/add-all")
+    public void getData(@RequestBody List<ModelData> modelData) {
         dbService.saveModelInfos(modelData);
     }
 
-    @GetMapping("/add")
-    public void getData(@RequestParam ModelData modelData) {
+    @PostMapping("/add")
+    public void getData(@RequestBody ModelData modelData) {
         dbService.saveModel(modelData);
     }
 
