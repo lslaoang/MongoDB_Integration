@@ -1,7 +1,10 @@
 package com.mongodbintegration.repository;
 
+import com.mongodbintegration.model.ModelData;
+import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
-@Repository
-public class DbRepository {
+import java.util.List;
+
+public interface DbRepository extends MongoRepository<ModelData, String> {
 }
