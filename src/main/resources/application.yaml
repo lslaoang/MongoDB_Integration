@@ -1,7 +1,9 @@
 spring:
+  profiles:
+    active: dev, secret
   application:
     name: MongoDB Integration
   data:
     mongodb:
-      uri: mongodb://localhost:27017/testData
-      database: testData
+      uri: ${db.mongodb.uri}
+      database: ${db.mongodb.name}

@@ -1,0 +1,6 @@
+db:
+  username: root-user
+  password: ${password}
+  mongodb:
+    uri: mongodb+srv://${db.username}:${db.password}@book-db.nygvwy9.mongodb.net/?retryWrites=true&w=majority&appName=book-db
+    name: book-db

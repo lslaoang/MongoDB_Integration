@@ -3,6 +3,7 @@ package com.mongodbintegration.service;
 import com.mongodbintegration.model.ModelData;
 import com.mongodbintegration.repository.DbRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -22,7 +23,7 @@ public class DbService {
     }
 
     public List<ModelData> getModelInfos() {
-        return dbRepository.findAll();
+        return dbRepository.findAll(Sort.by(Sort.Direction.ASC,"id"));
     }
     public List<ModelData> getModelInfos(List<String> ids) {
         return dbRepository.findAllById(ids);
